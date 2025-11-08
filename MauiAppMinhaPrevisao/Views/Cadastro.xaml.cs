@@ -17,6 +17,7 @@ public partial class Cadastro : ContentPage
             {
                 Nome = txt_nome.Text,
                 Email = txt_email.Text,
+                DataNascimento = txt_Dnas.Text,
                 Senha = txt_senha.Text
             };
 

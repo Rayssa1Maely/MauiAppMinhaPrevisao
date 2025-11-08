@@ -20,6 +20,9 @@
         <Label Text="Email: " />
         <Entry x:Name="txt_email" />
 
+        <Label Text="Data de Nascimento: " />
+        <Entry x:Name="txt_Dnas" />
+
         <Label Text="Senha:" />
         <Entry x:Name="txt_senha" IsPassword="True" />
 
