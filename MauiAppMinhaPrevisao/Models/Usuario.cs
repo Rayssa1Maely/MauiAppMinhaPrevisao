@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using SQLite;
+
+namespace MauiAppMinhaPrevisao.Models
+{
+    public class Usuario
+    {
+        string _nome;
+        string _email;
+        string _senha;
+
+        [PrimaryKey, AutoIncrement]
+
+        public int Id { get; set; }
+
+        public string Nome
+        {
+            get => _nome;
+            set
+            {
+                if (value == null)
+                {
+                    throw new Exception(
+                        "Por favor, preencha a descrição");
+                }
+                _nome = value;
+
+            }
+        }
+
+        public string Email
+        {
+            get => _email;
+            set
+            {
+                if (value == null)
+                {
+                    throw new Exception(
+                        "Por favor, preencha a ");
+                }
+                _email = value;
+
+            }
+        }
+
+        public string Senha
+        {
+            get => _senha;
+            set
+            {
+                if (value == null)
+                {
+                    throw new Exception(
+                        "Por favor, preencha a Senha");
+                }
+                _senha = value;
+
+            }
+        }
+    }
+
+    }
