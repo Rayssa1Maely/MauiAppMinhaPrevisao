@@ -15,19 +15,29 @@
             HorizontalOptions="Center" />
 
         <Label Text="Nome: " />
-        <Entry x:Name="txt_nome" />
+        <Entry x:Name="txt_nome" Placeholder="Digite seu nome"/>
 
         <Label Text="Email: " />
-        <Entry x:Name="txt_email" />
+        <Entry x:Name="txt_email" Placeholder="Digite seu email"/>
 
         <Label Text="Data de Nascimento: " />
-        <Entry x:Name="txt_Dnas" />
+        <Entry x:Name="txt_Dnas" Placeholder="DIgite sua data de nascimento"/>
 
         <Label Text="Senha:" />
-        <Entry x:Name="txt_senha" IsPassword="True" />
+        <Entry x:Name="txt_senha" IsPassword="True" Placeholder="Digite uma senha forte"/>
 
-        <Button Text="Entrar"
+        <Button Text="Cadastrar"
             Clicked="Button_Clicked"
             HorizontalOptions="Center" />
+
+        <Label 
+            Text="Já tem uma conta? Entrar"
+            HorizontalOptions="Center"
+            TextColor="Blue">
+
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Label.GestureRecognizers>
+        </Label>
     </VerticalStackLayout>
 </ContentPage>

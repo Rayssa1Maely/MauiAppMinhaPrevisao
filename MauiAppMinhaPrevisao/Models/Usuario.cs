@@ -26,7 +26,7 @@ namespace MauiAppMinhaPrevisao.Models
                 if (value == null)
                 {
                     throw new Exception(
-                        "Por favor, preencha a descrição");
+                        "Por favor, preencha o nome");
                 }
                 _nome = value;
 
@@ -56,7 +56,7 @@ namespace MauiAppMinhaPrevisao.Models
                 if (value == null)
                 {
                     throw new Exception(
-                        "Por favor, preencha a ");
+                        "Por favor, preencha o email ");
                 }
                 _email = value;
 

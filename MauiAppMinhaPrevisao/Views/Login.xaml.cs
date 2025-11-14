@@ -13,14 +13,25 @@ public partial class Login : ContentPage
     {
         try
         {
-            await App.Db.Search(txt_email.Text, txt_senha.Text);
-            await DisplayAlert("Sucesso!", "Registro Inserido", "OK");
-            await Navigation.PopAsync();
+            var resultado = await App.Db.Search(txt_email.Text, txt_senha.Text);
+            if(resultado.Count == 0)
+            {
+                await DisplayAlert("Erro", "Email ou senha incorretos!", "OK");
+                return;
+            }
+
+            await DisplayAlert("Sucesso!", "Olá", "OK");
+            await Navigation.PushAsync(new Dashboard());
 
         }
         catch (Exception ex)
         {
             await DisplayAlert("Ops", ex.Message, "OK");
         }
+    }
+
+    private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new Cadastro());
     }
 }

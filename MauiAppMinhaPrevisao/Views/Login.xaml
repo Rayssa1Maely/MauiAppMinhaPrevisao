@@ -16,13 +16,24 @@
                 HorizontalOptions="Center" />
 
             <Label Text="Email: " />
-            <Entry x:Name="txt_email" />
+            <Entry x:Name="txt_email" Placeholder="Digite seu email"/>
 
             <Label Text="Senha:" />
-            <Entry x:Name="txt_senha" IsPassword="True" />
+            <Entry x:Name="txt_senha" IsPassword="True" Placeholder="Digite sua senha"/>
 
         <Button Text="Entrar"
                 Clicked="Button_Clicked"
                 HorizontalOptions="Center" />
+
+        <Label 
+            Text="Não tem uma conta? Cadastre-se"
+            HorizontalOptions="Center"
+            TextColor="Blue">
+
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Label.GestureRecognizers>
+        </Label>
+        
     </VerticalStackLayout>
 </ContentPage>

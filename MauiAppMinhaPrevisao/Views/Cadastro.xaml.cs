@@ -22,13 +22,18 @@ public partial class Cadastro : ContentPage
             };
 
             await App.Db.Insert(usuario);
-            await DisplayAlert("Sucesso!", "Registro Inserido", "OK");
-            await Navigation.PopAsync();
+            await DisplayAlert("Sucesso!", "Seja bem vindo(a)!!", "OK");
+            await Navigation.PushAsync(new Dashboard());
 
         }
         catch (Exception ex)
         {
             await DisplayAlert("Ops", ex.Message, "OK");
         }
+    }
+
+    private async void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+    {
+        await Navigation.PushAsync(new Login());
     }
 }
