@@ -21,7 +21,7 @@
         <Entry x:Name="txt_email" Placeholder="Digite seu email"/>
 
         <Label Text="Data de Nascimento: " />
-        <Entry x:Name="txt_Dnas" Placeholder="DIgite sua data de nascimento"/>
+        <DatePicker x:Name="txt_Dnas"/>
 
         <Label Text="Senha:" />
         <Entry x:Name="txt_senha" IsPassword="True" Placeholder="Digite uma senha forte"/>
